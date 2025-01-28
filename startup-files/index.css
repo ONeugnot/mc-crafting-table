@@ -24,6 +24,10 @@ main {
 	gap: 50px;
 }
 
+.grid-grey img {
+	width: 100%;
+}
+
 .grid {
 	display: grid;
 	justify-items: center;
@@ -39,12 +43,12 @@ main {
 	width: 100%;
 	background-color: transparent;
 	box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.4);
-	background: #d1d1d1;
+	background: #686868;
 	border: none;
 }
 
 .grid-grey:hover {
-	background-color: #e8e8e8;
+	background-color: #b8b8b8;
 }
 
 .footer-end {
@@ -87,9 +91,6 @@ main {
 	box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.4);
 	background-color: #636363;
 	border: none;
-}
-.objet button:hover {
-	background-color: #e8e8e8;
 }
 
 @media screen and (min-width: 1440px) {

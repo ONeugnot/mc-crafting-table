@@ -87,7 +87,8 @@ main {
 	gap: 12px;
 }
 
-.objet button {
+button,
+.inventButton {
 	box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.4);
 	background-color: #636363;
 	border: none;

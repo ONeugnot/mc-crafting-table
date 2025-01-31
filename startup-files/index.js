@@ -45,75 +45,40 @@ const recipeImageSrcList = [pickaxeRecipeImageSrc, axeRecipeImageSrc];
 const craftingTable = ["", "", "", "", "", "", "", "", ""];
 const inventoryTable = [1, 2];
 
-const btn1 = document.createElement("button");
-const image = document.createElement("img");
-const invent = document.getElementById("invent");
+const ivent = document.getElementById("invent");
+const craftCase = document.querySelectorAll("#case1");
+const imageResult = document.getElementById("resultCase");
 
-image.src = "./assets/stick.webp";
-image.alt = "pickaxe";
-image.style.width = "70px";
-btn1.style.border = "none";
-btn1.appendChild(image);
-invent.appendChild(btn1);
+let pipette = "";
+let selectImageSrc = "";
+let btnOldActive = null;
 
-const btn2 = document.createElement("button");
-const image2 = document.createElement("img");
+function createBtnInvent(src, alt) {
+	const button = document.createElement("button");
+	const image = document.createElement("img");
+	button.classList.add("inventButton");
+	image.src = src;
+	image.alt = alt;
+	button.appendChild(image);
+	return button;
+}
 
-image2.src = "./assets/iron-ingot.webp";
-image2.alt = "iron-lingot";
-image2.style.width = "70px";
-image2.style.border = "none";
-btn2.appendChild(image2);
-invent.appendChild(btn2);
+for (let i = 0; i < createBtnInvent.length; i++) {
+	const element = array[i];
+}
 
-let stockImage = null;
-let btnSave = "";
+// for (let i = 0; i < case1.length; i++) {
+// 	const caseObject = case1[i];
 
-btn1.addEventListener("click", () => {
-	if (btn1.classList.contains("active") && btnSave == btn1) {
-		btn1.style.border = "none";
-		stockImage = null;
-		btnSave = "";
-		console.log(stockImage);
-		console.log(btnSave);
-		return;
-	}
-	btn1.style.border = "3px, solid, red";
-	btn1.classList.add("active");
-	stockImage = MATERIAL_STICK_IMG;
-	btnSave = btn1;
-	if (btn2.classList.contains("active")) {
-		btn2.classList.remove("active");
-		btn2.style.border = "none";
-	}
-	console.log(stockImage);
-	console.log(btnSave);
-});
+// 	caseObject.addEventListener("click", () => {
+// 		const imgCase = case1[i].firstElementChild;
 
-btn2.addEventListener("click", () => {
-	if (btn2.classList.contains("active") && btnSave == btn2) {
-		btn2.style.border = "none";
-		stockImage = null;
-		btnSave = "";
-		console.log(stockImage);
-		console.log(btnSave);
-		return;
-	}
-	btn2.style.border = "3px, solid, red";
-	btn2.classList.add("active");
-	stockImage = MATERIAL_IRON_INGOT_IMG;
-	btnSave = btn2;
-	if (btn1.classList.contains("active")) {
-		btn1.classList.remove("active");
-		btn1.style.border = "none";
-	}
-	console.log(stockImage);
-	console.log(btnSave);
-});
+// 		if (imgCase == null) return;
 
-let case1 = document.getElementById("case1");
-case1.addEventListener("click", () => {
-	case1 = stockImage;
-	craftingTable[0] = case2;
-	console.log(craftingTable);
-});
+// 		imgCase.src = MATERIAL_STICK_IMG;
+// 		imgCase.alt = "stick";
+
+// 		console.log(imgCase);
+
+// 	});
+// }
